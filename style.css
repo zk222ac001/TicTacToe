@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #FF5F6D, #FFC371);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h1 {
+    color: #fff;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    gap: 3px; /* Decrease the gap between rows and columns */
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+.cell {
+    width: 100px; /* Fixed width for cells */
+    height: 100px; /* Fixed height for cells */
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and border don't affect cell size */
+}
+
+.cell:hover {
+    background-color: #cfcfcf;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 255, 0.4); /* Blue color with opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff; /* White background for modal content */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    width: 80%; /* Could be more or less, depending on screen size */
+    color: #333; /* Text color */
+}
+
+/* Close Button */
+.close {
+    color: #fff; /* White color for close button */
+    position: absolute; /* Position relative to the modal content */
+    top: 10px; /* Adjust top position as needed */
+    right: 15px; /* Adjust right position as needed */
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 2; /* Ensure close button is above modal content */
+}
+
+.close:hover,
+.close:focus {
+    color: #ccc; /* Lighter color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
